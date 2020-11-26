@@ -7,22 +7,18 @@ import DateFnsUtils from '@date-io/date-fns';
 import { SnackbarHelperConfigurator } from '../utils/snackbarHelper';
 import theme from '../theme';
 import Routes from '../features/Routes';
-import LoadingSpinner, {
-  LoadingSpinnerContextProvider,
-} from '../components/UI/LoadingSpinner';
+import Spinner from '../features/Spinner';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <LoadingSpinnerContextProvider>
-        <LoadingSpinner />
-        <SnackbarProvider maxSnack={1}>
-          <SnackbarHelperConfigurator />
-          <MuiPickersUtilsProvider utils={DateFnsUtils}>
-            <Routes />
-          </MuiPickersUtilsProvider>
-        </SnackbarProvider>
-      </LoadingSpinnerContextProvider>
+      <Spinner />
+      <SnackbarProvider maxSnack={1}>
+        <SnackbarHelperConfigurator />
+        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+          <Routes />
+        </MuiPickersUtilsProvider>
+      </SnackbarProvider>
     </ThemeProvider>
   );
 }

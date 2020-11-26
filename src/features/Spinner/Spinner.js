@@ -1,8 +1,7 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Backdrop, CircularProgress } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-
-import { useLoadingSpinnerContext } from './LoadingSpinnerContext';
 
 const useStyles = makeStyles((theme) => ({
   backdrop: {
@@ -11,9 +10,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const LoadingSpinner = () => {
+const Spinner = () => {
   const classes = useStyles();
-  const open = useLoadingSpinnerContext();
+  const open = useSelector((state) => state.spinner.open);
 
   return (
     <div>
@@ -24,4 +23,4 @@ const LoadingSpinner = () => {
   );
 };
 
-export default LoadingSpinner;
+export default Spinner;
