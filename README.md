@@ -1,7 +1,6 @@
-
 # React Redux Starter
 
-A boilerplate [React](https://reactjs.org/) project equiped with [Redux](https://redux.js.org/) and [Material UI](https://material-ui.com/). Bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+A boilerplate [React](https://reactjs.org/) project equipped with [Redux](https://redux.js.org/) and [Material UI](https://material-ui.com/). Bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Installation
 
@@ -47,8 +46,8 @@ Expected response body structure from `login` request
 }
 ```
 
-* The `user` object must have a `roles` property which contains an array of roles. Roles must be mapped on `src\common\utils\roles.js`.
-* The `token` property's value will be automatically attached to the `Authorization` header of every HTTP request.
+- The `user` object must have a `roles` property which contains an array of roles. Roles must be mapped on `src\common\utils\roles.js`.
+- The `token` property's value will be automatically attached to the `Authorization` header of every HTTP request.
 
 ## Available Scripts
 
