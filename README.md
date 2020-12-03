@@ -46,7 +46,7 @@ Expected response body structure from `login` request
 }
 ```
 
-- The `user` object must have a `roles` property which contains an array of roles. Roles must be mapped on `src\common\utils\roles.js`.
+- The `user` object must have a `roles` property which contains an array of roles. Roles must be mapped on `src\utils\roles.js`.
 - The `token` property's value will be automatically attached to the `Authorization` header of every HTTP request.
 
 ## Available Scripts
