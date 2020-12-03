@@ -1,8 +1,8 @@
 import React from 'react';
 import { Router, Switch, Redirect } from 'react-router-dom';
 
-import history from '../../utils/history';
-import roles from '../../utils/roles';
+import history from 'utils/history';
+import roles from 'utils/roles';
 import PublicRoute from './PublicRoute';
 import PrivateRoute from './PrivateRoute';
 import { Main, Minimal } from '../Layout';

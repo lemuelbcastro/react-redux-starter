@@ -15,7 +15,7 @@ import {
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import { nanoid } from 'nanoid';
 
-import roles from '../../utils/roles';
+import roles from 'utils/roles';
 import Banner from './Banner';
 
 const useStyles = makeStyles((theme) => ({
