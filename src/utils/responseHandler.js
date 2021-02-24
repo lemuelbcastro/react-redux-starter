@@ -1,6 +1,6 @@
 import history from './history';
-import session from './session';
 import snackbarHelper from './snackbarHelper';
+import store from '../app/store';
 
 const handler = {
   success: (response) => response,
@@ -13,14 +13,20 @@ const handler = {
           snackbarHelper.error('The server could not process your request');
           break;
         case 401:
-          session.destroy();
-          history.push('/');
+          store.dispatch({ type: 'authentication/logout' });
           break;
         case 403:
           history.push('/forbidden');
           break;
         case 404:
           history.push('/not-found');
+          break;
+        case 422:
+          const { errors } = response.data;
+
+          Object.entries(errors).forEach(([, value]) =>
+            snackbarHelper.error(value)
+          );
           break;
         case 500:
           history.push('/server-error');
